@@ -1,0 +1,13 @@
+//Configuración para que babel pueda reconocer los presets
+
+{
+    "presets": [
+        "@babel/preset-env",
+        //Compila ES5, ES6, JS
+        "@babel/preset-react"
+        //Compila JSX y sintaxys React
+    ],
+	"plugins": [
+		"@babel/plugin-transform-runtime"
+	]
+}
