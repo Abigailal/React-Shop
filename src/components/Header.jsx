@@ -22,7 +22,7 @@ const Header = () => {
 	return (
 		<Navbar fixed="top" collapseOnSelect expand="lg" bg="ligth" variant="ligth" className='bar-fondo'>
 			<Container fluid className="px-4">
-				<Navbar.Brand>
+				<Navbar.Brand href='./'>
 					<img src={logo} alt="logo" className="nav-logo ms-3 pb-1" />
 				</Navbar.Brand>
 				<Navbar.Toggle aria-controls="responsive-navbar-nav" className='mb-2 mt-2'/>
