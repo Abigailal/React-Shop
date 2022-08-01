@@ -1,1 +1,43 @@
 node_modules
+
+
+Desplegar una app de React junto con otros proyectos en Github Pages
+Tan
+tanx
+😃 Hola!!! Este tutorial es para aquellos que desean desplegar su app de react en GitHub Pages, pero ya tienen otros proyectos usando GitHub Pages.
+
+Es decir, usuario.github.io/ ya está ocupado y la app la queremos en usuario.github.io/nombre-de-mi-repo
+
+O bien si tenemos un dominio personalizado ya asociado a GitHub Pages, nuestra app la queremos en mi-dominio.com/nombre-de-mi-repo.
+
+Para conseguir que nuestra app se muestre en la url con /nombre-de-mi-repo debemos cambiar lo siguiente:
+
+en el package.json agregaremos el homepage con la url para GitHub Pages de nuestro repo así:
+
+{
+  "homepage": "https://username.github.io/nombre-de-mi-repo/",
+  "name": "my-app",
+  "version": "1.0.0",
+  "description": "Desc",
+  "main": "src/index.js",
+
+en el webpack.config.js
+
+A filename le agregaremos el nombre de nuestro repo al bundle.js así: nombre-de-mi-repo/bundle.js
+El publicPath será el nombre de nuestro repo, así: /nombre-de-mi-repo/
+Nos quedará así
+
+module.exports = {
+  entry: "./src/index.js",
+  output: {
+    path: path.resolve(__dirname, "dist"),
+    filename: "nombre-de-mi-repo/bundle.js",
+    publicPath: "/nombre-de-mi-repo/",
+  },
+
+Por último a nuestro BrowserRouter le debemos agregar un basename con el nombre de nuestro repo, así:
+
+<BrowserRouter  "/nombre-de-mi-repo">
+Una vez hechos estos cambios nuestra app se verá en usuario.github.io/nombre-de-mi-repo o (si tenemos un dominio personalizado) en mi-dominio.com/nombre-de-mi-repo
+
+En esta clase puedes ver como usar GitHub Actions para automatizar el despliegue 🚀
