@@ -1,0 +1,39 @@
+@use './vars';
+
+
+.bar-fondo{
+	background-color: white;
+}
+.nav-logo{width: 100%;}
+.navbar-link{
+	text-decoration: none;
+	color: var(--very-light-pink);
+}
+.navbar-link:hover {
+	border: 1px solid var(--hospital-green);
+	color: var(--hospital-green);
+	border-radius: 8px;
+}
+.NavDropdown .navbar-email {
+	color: var(--very-light-pink);
+	font-size: var(--sm);
+}
+.navbar-shopping-cart { position: relative; }
+.navbar-shopping-cart div {
+	width: 16px;
+	height: 16px;
+	background-color: var(--hospital-green);
+	border-radius: 50%;
+	font-size: var(--sm);
+	position: absolute;
+	top: -6px;
+	right: -3px;
+}
+.navbar-email .sign-green{
+	color: var(--hospital-green);
+	font-size: var(--md);
+}
+#shopping-cart .btn-cart{
+	border: none;
+	background: none;
+}
