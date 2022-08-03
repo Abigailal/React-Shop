@@ -12,9 +12,9 @@ module.exports = {
     output:{
         path: path.resolve(__dirname, 'dist'),
         //path resolve para ubicar donde estoy y a donde voy a pasar el proyecto terminado
-        filename: 'React-Shop/bundle.js',
+        filename: 'bundle.js',
         // nombre del archivo js resultante
-        publicPath:'/React-Shop/'
+        publicPath:'/'
         //Para react-route-dom
     },
     mode: 'development',
